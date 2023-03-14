@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document777</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <div id="logo" onclick="slowScroll('#top')">
+            <span>Gorillaz</span>
+        </div>
+        <div id="about">
+            <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+            <a href="#" title="Преимущества" onclick="slowScroll('#overview')">Преимущества</a>
+            <a href="#" title="Контакты" onclick="slowScroll('#contacts')">Контакты</a>
+            <a href="#" onclick="slowScroll" title="Ответы на вопросы">FAQ</a>
+
+        </div>
+    </header>
+
+    <div id="top">
+        <h1>Анимация</h1>
+        <h3>это лучшая работа в мире</h3>
+    </div>
+
+    <div id="main">
+        <div class="intro">
+            <h2>Наши аниматоры подарят вам незабываемые эмоции!</h2>
+            <span>Большой выбор различных тематичсеких программ</span>
+        </div>
+   
+    <div class="text">
+        <span>Я считаю, что аниматор — это профессия будущего. Визуальный контент окружает нас повсюду, и его будет требоваться всё больше и больше. В дальнейшем технологии позволят транслировать анимационные изображения прямо в мозг человека, и для их создания также понадобятся аниматоры</span>
+    </div>
+    </div>
+   <div id="overview" class="overview">
+    <h2>Преимущества</h2>
+    <h4>с нами всегда весело</h4>
+    <div>
+     <div class="img">
+        <img src="https://statcdn.fandango.com/MPX/image/NBCU_Fandango/79/250/thumb_AC3E8332-BDAE-4BCC-88E6-7885FF452732.jpg"    alt="">
+        <span>Основная анимация</span>
+     </div>
+    </div>
+    <div class="img">
+        <img src="https://images.kinorium.com/movie/shot/523798/w1500_916555.jpg" alt="">
+        <span>Дополнительная анимация</span>
+    </div>
+    <div class="img">
+        <img src="https://live24.ru/wp-content/uploads/2022/04/mv5bmzvjodu4odktmty1ns00njawlwjhm2mtnjmynwjkowziztq1xkeyxkfqcgdeqxvyntayndq2nji-._v1_sx1777_cr001777999_al_.jpg" alt="">
+        <span>Основная и дополнительная анимация</span>
+    </div>
+    <div class="img">
+        <img src="https://i.pinimg.com/originals/2a/82/a5/2a82a50f8ef492f95d5c157640bf5dee.png" alt="">
+        <span>Новая экспериментальная анимация</span>
+    </div>
+   </div>
+
+   <div id="contacts">
+    <center><h5>Обратная связь</h5></center>
+    <form id="form_input">
+     <label for="name">Имя <span>*</span></label><br>
+     <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+     <label for="name">Ваша почта <span>*</span></label><br>
+     <input type="text" placeholder="Введите email" name="email" id="email"><br>
+     <label for="name">Сообшение <span>*</span></label><br>
+     <textarea type="text" placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+     <div id="mess_send" class="btn">Отправить</div>
+    </form>
+   </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        function slowScroll(id) {
+            $('html,body').animate({
+                scrollTop: $(id).offset().top
+            }, 500);
+        }
+
+        $(document).on("scroll", function () {
+            if ($(window).scrollTop() === 0)
+                $("header").removeClass("fixed");
+            else
+                $("header").attr("class", "fixed");
+        });
+    </script>
+</body>
+</html>
